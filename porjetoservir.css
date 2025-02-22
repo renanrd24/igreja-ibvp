@@ -1,0 +1,231 @@
+:root {
+    --cor-azul-header: #005f8c;
+    --cor-fundo: #efefef;
+    --cor-azul-clara-botaohover: #1e90ff; 
+    --cor-azul-escura-botao: #000080; 
+    --cor-branca-corfonte: #fff7f7; 
+    --cor-marom-titulo: #1e202c; 
+    --cor-marom-botaoserviso: #00608cbf; 
+    --cor-marom-botaohover: #efefef;
+    --cor-azul-escuro-claro: #b8b8ca; 
+    --fonte-principal: "Merriweather", serif; 
+}
+
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, var(--fonte-principal);
+    background-color: var(--cor-fundo );
+    color: var(--cor-branca);
+    text-align: center;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+header {
+    background-color: #333;
+    padding: 2vh;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0.5rem;
+}
+
+header nav ul li a {
+    color: var(--cor-branca-corfonte);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.tet-projeto {
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-size: 52px;
+}
+
+section {
+    padding: 5vh 10%;
+}
+
+.section-home {
+    background-color: var(--cor-fundo);
+}
+
+.section-servicos {
+    background-color: var(--cor-fundo);
+}
+
+.service {
+    margin: 2vh;
+    background-color: var(--cor-marom-botaoserviso);
+    padding: 2vh;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.service:hover {
+    background-color: var( --cor-marom-botaohover);
+}
+
+button{
+    background-color: var(--cor-azul-escura-botao);
+    color: var(--cor-branca-corfonte);
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    max-width: 200px; 
+    width: 80%;
+}
+
+.botao-footer {
+    background-color: var(--cor-azul-escura-botao);
+    color: var(--cor-branca-corfonte);
+    text-decoration: none;
+}
+
+button:hover, button a:hover {
+    background-color: var(--cor-azul-clara-botaohover);
+}
+
+input, textarea {
+    width: 90%;
+    max-width: 400px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid var(--cor-destaquedois);
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--cor-azul-escura-botao);
+    color: var(--cor-branca-corfonte);
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 601px) {
+    header .menu-sunp {
+        display: none;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    section {
+        padding: 100% -100%;
+        margin: 10px -20px;
+        margin-bottom: -40%;
+        width: 155%;
+        transform: scale(0.7);
+        transform-origin: top left;
+    }
+
+    .section-sobre {
+        padding: 50% -50%;
+        margin: 5px -10px;
+    }
+
+    .section-contato {
+        padding: -50% -100%;
+        margin: -10px -10px;
+    }
+
+    .home {
+        margin: 100%;
+    }
+
+    .localizasao {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: -200%;
+    }
+
+    .menu-nav {
+        display: none;
+    }
+
+    .menu-btn {
+        font-size: 30px;
+        cursor: pointer;
+        color: var(--cor-roxo);
+    }
+
+    #mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: var(--cor-branca-corfonte);
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 1001;
+        padding-top: 20%;
+        border-radius: 0px 0px 0px 25px;
+    }
+
+    #mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #mobile-menu ul li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    #mobile-menu ul li a {
+        text-decoration: none;
+        color: var(--cor-branco);
+        width: 150%;
+        font-size: 18px;
+    }
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(5px);
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 1000;
+    }
+
+    .menu-open #mobile-menu {
+        right: 0;
+    }
+
+    .menu-open #overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociais</title>
+    <link rel="stylesheet" href="redesoc.css">
+</head>
+
+<body>
+    <header>
+        <section id="home" class="section-home">
+            <h1><br> Bem-vindo a Página da Igreja Batista Vida Plena</h1>
+            <h5><i class="tet-projeto">Rede Social</i></h5>
+        </section>
+    </header>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+        &#9776;
+    </div>
+
+    <!-- Menu de navegação -->
+    <nav id="menu" class="menu">
+        <ul>
+            <li><a href="/index.html"><img src="/Design sem nome (15).png" alt=""></a></li>
+            <li><a href="/porjetoservir.html"><img width="50px" src="/306144514_455408166621205_7678811660521052133_n.png" alt="Projeto Servir"></a></li>
+            <li><a href="/localizaçao.html"><img src="/Design sem nome (9).png" alt="Localização"></a></li>
+            <li><a href="/contatos.html"><img src="/Design sem nome (10).png" alt="Meios de Contato"></a></li>
+            <li><a href="/infor.html"><img src="/Design sem nome (12).png" alt="Documentação"></a></li>
+            <li><a href="/recados.html"><img src="/Design sem nome (13).png" alt="Recados"></a></li>
+            <li><a href="/dizimo.html"><img src="/Design sem nome (14).png" alt="Dizimo"></a></li>
+            <li><a href="/cadastro.html"><img src="/Design sem nome (8).png" alt="Troca de Usuario"></a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay de fundo para o menu -->
+    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+    <!-- Links de redes sociais -->
+    <div class="container">
+        <a class="social-link youtube" href="https://www.youtube.com/channel/UCAn6PvnjTV_2xnkWAksoekw" target="_blank">YouTube</a>
+        <a class="social-link instagram" href="https://www.instagram.com/ibvp.oficial/" target="_blank">Instagram IBVP</a>
+        <a class="social-link instagram" href="https://www.instagram.com/jovipgalia/" target="_blank">Instagram Jovens</a>
+        <a class="social-link instagram" href="https://www.instagram.com/projeto_crianca_feliz50/" target="_blank">Instagram Criança</a>
+    </div>
+
+    <script>
+        // Função para alternar a visibilidade do menu em dispositivos móveis
+        function toggleMenu() {
+            const menu = document.getElementById('menu'); // Alterado para 'menu'
+            menu.classList.toggle('show');
+            const overlay = document.getElementById('overlay');
+            overlay.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

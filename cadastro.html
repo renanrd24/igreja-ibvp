@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro -  Pagina Igreja Batista - IBVP</title>
+    <link rel="stylesheet" href="cadastos.css">
+</head>
+<body>
+    <h2>Cadastro -  Pagina Igreja Batista - IBVP</h2>
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="email" id="email" placeholder="E-mail">
+    <input type="text" id="telefone" placeholder="Telefone">
+    <input type="password" id="senha" placeholder="Senha">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <p>Já tem uma conta? <a href="login.html">Ja Tenho o Cadasto</a></p>
+
+    <script>
+        function cadastrar() {
+            let nome = document.getElementById("nome").value;
+            let email = document.getElementById("email").value;
+            let telefone = document.getElementById("telefone").value;
+            let senha = document.getElementById("senha").value;
+
+            if (!nome || !email || !telefone || !senha) {
+                alert("Preencha todos os campos!");
+                return;
+            }
+
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+            if (usuarios.some(u => u.email === email)) {
+                alert("E-mail já cadastrado!");
+                return;
+            }
+
+            usuarios.push({ nome, email, telefone, senha });
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+            alert("Cadastro realizado com sucesso!");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

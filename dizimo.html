@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dízimos e Ofertas</title>
+    <link rel="stylesheet" href="dizimo.css">
+</head>
+
+<body>
+    <header>
+        <section id="home" class="section-home">
+            <h1><br> Bem-vindo a Pagina da Igreja Batista Vida Plena</h1>
+            <h5><i class="tet-projeto">Dizimo</i></h5>
+        </section>
+    </header>
+
+    <nav class="menu-nav">
+        <ul class="menu-list">
+            <li><a href="/index.html"><img src="/Design sem nome (15).png" alt=""></a></li>
+            <li><a href="/porjetoservir.html"><img width="50px" src="/306144514_455408166621205_7678811660521052133_n.png" alt="Projeto Servir"></a></li>
+            <li><a href="/localizaçao.html"><img src="/Design sem nome (9).png" alt="Localização"></a></li>
+            <li><a href="/contatos.html"><img src="/Design sem nome (10).png" alt="Meios de Contato"></a></li>
+            <li><a href="/redesoc.html"><img src="/Design sem nome (11).png" alt="Redes Sociais"></a></li>
+            <li><a href="/infor.html"><img src="/Design sem nome (12).png" alt="Documentação"></a></li>
+            <li><a href="/recados.html"><img src="/Design sem nome (13).png" alt="Recados"></a></li>
+            <li><a href="/cadastro.html"><img src="/Design sem nome (8).png" alt="Troca de Usuario"></a></li>
+            </a>
+        </ul>
+    </nav>
+
+    <div class="mobile-menu">
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <nav id="mobile-nav">
+            <ul class="menu-list">
+                <li><a href="/index.html"><img src="/Design sem nome (15).png" alt=""></a></li>
+                <li><a href="/porjetoservir.html"><img width="50px" src="/306144514_455408166621205_7678811660521052133_n.png" alt="Projeto Servir"></a></li>
+                <li><a href="/localizaçao.html"><img src="/Design sem nome (9).png" alt="Localização"></a></li>
+                <li><a href="/contatos.html"><img src="/Design sem nome (10).png" alt="Meios de Contato"></a></li>
+                <li><a href="/redesoc.html"><img src="/Design sem nome (11).png" alt="Redes Sociais"></a></li>
+                <li><a href="/infor.html"><img src="/Design sem nome (12).png" alt="Documentação"></a></li>
+                <li><a href="/recados.html"><img src="/Design sem nome (13).png" alt="Recados"></a></li>
+                <li><a href="/cadastro.html"><img src="/Design sem nome (8).png" alt="Troca de Usuario"></a></li>
+            </ul>
+        </nav>
+        <div id="overlay" onclick="toggleMenu()"></div>
+    </div>
+
+    <section id="formulario" class="dizimo-pix">
+        <h2>Faça sua Contribuição</h2>
+        <form id="doacaoForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="valor">Valor (R$):</label>
+            <input type="number" id="valor" required>
+
+            <label for="metodo">Método de Pagamento:</label>
+            <select id="metodo">
+                <option value="pix">PIX</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="boleto">Boleto Bancário</option>
+            </select>
+
+            <button type="submit">Contribuir</button>
+        </form>
+    </section>
+
+    <section id="chavePix" class="dizimo-form">
+        <h2>Chave PIX para Doações</h2>
+        <p id="pixKey">14933006239</p>
+        <p id="pixEmail">macrocontabil@macrocontabilconessa.com.br</p>
+        <button onclick="copiarChave()">Copiar Chave PIX</button>
+    </section>
+
+    <section id="confirmacao" style="display: none;" class="dizimo-form">
+        <h2>Obrigado pela Oferta!</h2>
+        <p id="msgConfirmacao"></p>
+        <button onclick="voltarFormulario()">Nova Oferta</button>
+    </section>
+
+    <script>
+        document.getElementById("doacaoForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let nome = document.getElementById("nome").value;
+            let valor = document.getElementById("valor").value;
+            let metodo = document.getElementById("metodo").value;
+            let mensagem = `Obrigado, ${nome}! Sua contribuição de R$ ${valor} via ${metodo.toUpperCase()} foi registrada. Agora, só falta copiar a Chave PIX e finalizar.`;
+
+            document.getElementById("msgConfirmacao").innerText = mensagem;
+
+            document.getElementById("formulario").style.display = "none";
+            document.getElementById("confirmacao").style.display = "block";
+        });
+
+        function copiarChave() {
+            const chave = document.getElementById('pixKey').innerText;
+            navigator.clipboard.writeText(chave).then(() => {
+                alert('Chave PIX copiada!');
+            });
+        }
+
+        function voltarFormulario() {
+            document.getElementById("formulario").style.display = "block";
+            document.getElementById("confirmacao").style.display = "none";
+        }
+
+        function toggleMenu() {
+            document.body.classList.toggle("menu-open");
+        }
+
+    </script>
+</body>
+
+</html>

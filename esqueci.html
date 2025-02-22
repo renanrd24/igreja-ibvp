@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="cadastos.css">
+</head>
+<body>
+    <h2>Recuperar Senha</h2>
+    <input type="email" id="emailRecuperacao" placeholder="Digite seu e-mail">
+    <button onclick="verificarEmail()">Enviar</button>
+    <div id="novaSenhaDiv" style="display:none;">
+        <input type="password" id="novaSenha" placeholder="Nova senha">
+        <button onclick="alterarSenha()">Alterar Senha</button>
+    </div>
+
+    <script>
+        function verificarEmail() {
+            let email = document.getElementById("emailRecuperacao").value;
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+            let usuario = usuarios.find(u => u.email === email);
+
+            if (usuario) {
+                document.getElementById("novaSenhaDiv").style.display = "block";
+                localStorage.setItem("emailRecuperacao", email);
+            } else {
+                alert("E-mail não encontrado!");
+            }
+        }
+
+        function alterarSenha() {
+            let novaSenha = document.getElementById("novaSenha").value;
+            let email = localStorage.getItem("emailRecuperacao");
+
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+            let usuario = usuarios.find(u => u.email === email);
+
+            if (usuario) {
+                usuario.senha = novaSenha;
+                localStorage.setItem("usuarios", JSON.stringify(usuarios));
+                alert("Senha alterada com sucesso!");
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</body>
+</html>

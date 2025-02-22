@@ -1,0 +1,126 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header.section-home {
+    background: linear-gradient(135deg, #007bff, #004080);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.tet-projeto {
+    color: #ffd700;
+    font-style: normal;
+}
+
+/* Menu de navegação */
+nav.menu {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav.menu ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav.menu ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav.menu ul li a:hover {
+    background: #007bff;
+}
+
+/* Menu responsivo */
+.menu-toggle {
+    display: none;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.menu ul {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        padding: 10px;
+    }
+
+    nav.menu ul.show {
+        display: flex;
+    }
+
+    nav.menu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Seção de Recados */
+section.section-servicos {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #007bff;
+}
+
+.service {
+    background: #f8f8f8;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    color: #004080;
+}
+
+.service p {
+    font-size: 16px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}

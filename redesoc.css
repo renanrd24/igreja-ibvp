@@ -1,0 +1,176 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Protest+Strike&display=swap');
+
+/* Definição de variáveis globais */
+:root {
+    --cor-fundo: #efefef;
+    --cor-secundaria: #1E202C;
+    --cor-terciaria: #132227;
+    --cor-preto: #040c0e;
+    --cor-cinza: #2e2e2e;
+    --cor-branco: #FFF7F7;
+    --cor-destaque: #9AC8CD;
+    --cor-roxo: #462F9F;
+    --fonte-principal: "Merriweather", serif;
+}
+
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+}
+
+.section-home {
+    display: block;
+    align-items: center;
+    justify-items: center;
+    padding: 10px 20px 40px;
+    background-color: var(--cor-roxo)
+}
+
+h1 {
+    margin: 2%;
+}
+
+/* Estilo do menu principal */
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Ícone de menu para mobile */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--cor-branco);
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    text-align: center;
+}  
+
+/* Responsividade do menu */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu li {
+        text-align: center;
+    }
+}
+
+/* Estilo do menu adicional */
+.menu-nav {
+    background: var(--cor-preto);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    display: none;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-list a {
+    text-decoration: none;
+    color: var(--cor-branco);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.menu-list a:hover {
+    background: var(--cor-destaque);
+    color: var(--cor-preto);
+    transform: scale(1.05);
+}
+
+/* Estilo dos botões sociais */
+.social-link {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--cor-branco);
+    border-radius: 6px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.social-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease-in-out;
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+.social-link:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.youtube, .instagram {
+    background: var(--cor-roxo);
+}
+
+/* Estilo do botão de imagem */
+.botaoimg {
+    width: 45px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.botaoimg:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}

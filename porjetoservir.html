@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Servir</title>
+    <link rel="stylesheet" href="porjetoservir.css">
+</head>
+
+<body>
+    <header>
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="/index.html"><img src="/Design sem nome (15).png" alt=""></a></li>
+                <li><a href="/localizaçao.html"><img src="/Design sem nome (9).png" alt="Localização"></a></li>
+                <li><a href="/contatos.html"><img src="/Design sem nome (10).png" alt="Meios de Contato"></a></li>
+                <li><a href="/redesoc.html"><img src="/Design sem nome (11).png" alt="Redes Sociais"></a></li>
+                <li><a href="/infor.html"><img src="/Design sem nome (12).png" alt="Documentação"></a></li>
+                <li><a href="/redesoc.html"><img src="/Design sem nome (13).png" alt="Recados"></a></li>
+                <li><a href="/dizimo.html"><img src="/Design sem nome (14).png" alt="Dizimo"></a></li>
+                <li><a href="/index.html"><img src="/Design sem nome (8).png" alt="Troca de Usuario"></a></li>
+            </ul>
+        </nav>
+        <div class="menu-sunp">
+            <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+            <nav id="mobile-menu">
+                <ul>
+                    <li><a href="/index.html"><img src="/Design sem nome (15).png" alt=""></a></li>
+                    <li><a href="/localizaçao.html"><img src="/Design sem nome (9).png" alt="Localização"></a></li>
+                    <li><a href="/contatos.html"><img src="/Design sem nome (10).png" alt="Meios de Contato"></a></li>
+                    <li><a href="/redesoc.html"><img src="/Design sem nome (11).png" alt="Redes Sociais"></a></li>
+                    <li><a href="/infor.html"><img src="/Design sem nome (12).png" alt="Documentação"></a></li>
+                    <li><a href="/redesoc.html"><img src="/Design sem nome (13).png" alt="Recados"></a></li>
+                    <li><a href="/dizimo.html"><img src="/Design sem nome (14).png" alt="Dizimo"></a></li>
+                    <li><a href="/index.html"><img src="/Design sem nome (8).png" alt="Troca de Usuario"></a></li>
+                </ul>
+            </nav>
+
+            <div id="overlay" onclick="toggleMenu()"></div>
+        </div>
+    </header>
+
+    <section id="home" class="section-home">
+        <h1>Bem-vindo ao Site <br> <i class="tet-projeto">Projeto Servir</i></h1>
+        <p>Levamos cuidado e solidariedade para a comunidade com diversos serviços gratuitos!</p>
+        <button id="showMoreBtn">Saiba Mais</button>
+    </section>
+
+    <section id="servicos" class="section-servicos">
+        <h2>Serviços Oferecidos</h2>
+        <div class="service">
+            <h3>Atendimento Médico</h3>
+            <p>Consultas médicas gratuitas para a população.</p>
+        </div>
+        <div class="service">
+            <h3>Psicologia</h3>
+            <p>Consultas com psicólogos para cuidar da saúde mental.</p>
+        </div>
+        <div class="service">
+            <h3>Advogado</h3>
+            <p>Orientação jurídica em questões diversas.</p>
+        </div>
+        <div class="service">
+            <h3>Cabeleireiro</h3>
+            <p>Serviços de cuidados com cabelo.</p>
+        </div>
+        <div class="service">
+            <h3>Óptica</h3>
+            <p>Consultas oftalmológicas e fornecimento de óculos.</p>
+        </div>
+        <div class="service">
+            <h3>Oferecimento de Alimentos</h3>
+            <p>Café, bolachas, chocolate, algodão doce e muito mais.</p>
+        </div>
+    </section>
+
+    <section id="sobre" class="section-sobre">
+        <h2>Sobre o Projeto</h2>
+        <p>O Projeto Servir é uma iniciativa que visa levar serviços essenciais para pessoas de diversas comunidades,
+            promovendo saúde, educação e bem-estar. Nossa missão é garantir que cada pessoa tenha acesso a um
+            atendimento digno e de qualidade.</p>
+    </section>
+
+    <section id="contato" class="section-contato">
+        <h2>Entre em Contato</h2>
+        <h3>Secretaria da Igreja Batista Vida Plena</h3>
+        <p>(14) 93300-6239</p>
+    </section>
+
+    <section class="section-contato">
+        <h2>Site Oficial Projeto Servir</h2>
+        <h3>Atenção: este link leva para outro site e não é de domínio da nossa igreja</h3>
+        <button><a class="botao-footer"
+                href="//docs.google.com/forms/d/e/1FAIpQLSciNKshA-LqfbiUYamzIdhxCXI1_3t8Ld92IXI6hkbAeRelQg/viewform">Projeto
+                Servir</a></button>
+    </section>
+
+    <footer>
+        <h4>2025 Projeto Servir.</h4>
+    </footer>
+
+    <script src="animar.js"></script>
+    <script>
+        document.getElementById('showMoreBtn').addEventListener('click', function () {
+            alert("O Projeto Servir oferece diversos atendimentos gratuitos para a comunidade. Junte-se a nós!");
+        });
+
+        function toggleMenu() {
+            document.body.classList.toggle("menu-open");
+            let menu = document.getElementById("mobile-menu");
+            let overlay = document.getElementById("overlay");
+
+            if (document.body.classList.contains("menu-open")) {
+                menu.style.right = "0";
+                overlay.style.visibility = "visible";
+                overlay.style.opacity = "1";
+            } else {
+                menu.style.right = "-300px";
+                overlay.style.visibility = "hidden";
+                overlay.style.opacity = "0";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

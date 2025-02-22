@@ -1,0 +1,154 @@
+:root {
+    --cor-fundo: #D8D8CA;
+    --cor-secundaria: #1e202c;
+    --cor-terciaria: #462F9F;
+    --cor-preto: #1E202C; 
+    --cor-cinza: #2e2e2e;
+    --cor-branco: #FFF7F7; 
+    --cor-destaque: #9AC8CD;
+    --cor-roxo: #462F9F; 
+    --fonte-principal: "Merriweather", serif; 
+}
+* {
+    margin: 0 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-cinza);
+}
+
+header {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+a .botaoimg {
+    background-color: none;
+    margin: 0%;
+    padding: 0%;
+    width: 3rem;
+    border: 5px solid var(--cor-secundaria);
+    border-radius: 5px;
+}
+
+.menu-nav {
+    display: block;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+.menu-list li {
+    margin: 0 20px;
+}
+
+.menu-list a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    display: block;
+}
+
+
+.menu-btn {
+    display: none;
+    font-size: 2rem;
+    color: var(--cor-cinza);
+    padding: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+#mobile-nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-secundaria);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 9998;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9997;
+}
+
+#formulario, #chavePix, #confirmacao {
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--cor-branco);
+    border-radius: 5px;
+}
+
+#formulario input, #formulario select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--cor-destaque);
+    color: var(--cor-branco);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-roxo);
+}
+
+@media screen and (max-width: 768px) {
+    .menu-nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .menu-open #mobile-nav {
+        display: block;
+    }
+
+    .menu-open #overlay {
+        display: block;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--cor-secundaria);
+    }
+
+    .menu-list li {
+        margin: 10px 0;
+    }
+}

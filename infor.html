@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regintro Atividade</title>
+    <link rel="stylesheet" href="infor.css">
+</head>
+
+<body class="body-corpo">
+    <header id="home" class="section-home">
+            <h1><br> Bem-vindo a Pagina da Igreja Batista Vida Plena</h1>
+            <h5><i class="tet-projeto">Documentação</i></h5>
+    </header>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        &#9776;
+    </div>
+
+    <!-- Menu de navegação -->
+    <nav id="menu" class="menu">
+        <ul>
+            <li><a href="/index.html"><img src="/Design sem nome (15).png" alt=""></a></li>
+            <li><a href="/porjetoservir.html"><img width="50px" src="/306144514_455408166621205_7678811660521052133_n.png" alt="Projeto Servir"></a></li>
+            <li><a href="/localizaçao.html"><img src="/Design sem nome (9).png" alt="Localização"></a></li>
+            <li><a href="/contatos.html"><img src="/Design sem nome (10).png" alt="Meios de Contato"></a></li>
+            <li><a href="/redesoc.html"><img src="/Design sem nome (11).png" alt="Redes Sociais"></a></li>
+            <li><a href="/recados.html"><img src="/Design sem nome (13).png" alt="Recados"></a></li>
+            <li><a href="/dizimo.html"><img src="/Design sem nome (14).png" alt="Dizimo"></a></li>
+            <li><a href="/cadastro.html"><img src="/Design sem nome (8).png" alt="Troca de Usuario"></a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Informações de Registro</h2>
+        <table border="1">
+            <tr>
+                <td><strong>CNPJ:</strong> 17.753.028/0001-00 - 17753028000100</td>
+            </tr>
+            <tr>
+                <td><strong>Razão Social:</strong> Igreja Batista Vida Plena</td>
+            </tr>
+            <tr>
+                <td><strong>Nome Fantasia:</strong> Igreja Batista Vida Plena</td>
+            </tr>
+            <tr>
+                <td><strong>Data da Abertura:</strong> 05/03/2013</td>
+            </tr>
+            <tr>
+                <td><strong>Natureza Jurídica:</strong> Organização Religiosa</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Atividades - CNAES</h2>
+        <table border="2">
+            <tr>
+                <td>Esta atividade compreende:</td>
+            </tr>
+            <tr>
+                <td>- as atividades de organizações religiosas ou filosóficas</td>
+            </tr>
+            <tr>
+                <td>- as atividades de igrejas, mosteiros, conventos ou organizações similares</td>
+            </tr>
+            <tr>
+                <td>- as atividades de catequese, celebração ou de organização de cultos</td>
+            </tr>
+            <tr>
+                <td>- as cerimônias religiosas de honras fúnebres</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table border="2">
+            <h3>Descritores da atividade:</h3>
+            <tr>
+                <td>
+                    Celebração e organização culto religioso, Terreiro de umbanda, <br>
+                    Casa de benção, Organização filosófica, Centro de umbanda, Casa maçônica, Templo, <br>
+                    Centro espírita, Mesquita, Terreiro de candomblé, Missão religiosa, Sinagoga, <br>
+                    Terreiro de macumba, Mosteiro, Arquidiocese, Irmandade religiosa, Tenda espírita, <br>
+                    Igreja, Organização religiosa, Catequese, Instituição religiosa, Casa de oração, <br>
+                    Convento, Templo religioso, Cerimônias religiosas de honras fúnebres, Congregação religiosa.
+                </td>
+            </tr>
+        </table>
+        <br>
+    </section>
+    <footer>
+        <h2 class="text-footer">IBVP - Igreja Batista Vida Plena</h2>
+    </footer>
+    <script>
+        // Função para alternar a visibilidade do menu em dispositivos móveis
+        function toggleMenu() {
+            const menu = document.getElementById('menu'); // Alterado para 'menu'
+            menu.classList.toggle('show');
+            const overlay = document.getElementById('overlay');
+            overlay.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

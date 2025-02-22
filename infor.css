@@ -1,0 +1,164 @@
+/* Estilos gerais do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #1e4e8c;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+h5 {
+    font-size: 18px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.tet-projeto {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Menu estilo desktop */
+.menu {
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Cor secundária para o fundo do menu */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu a {
+    color: var(--cor-branco); /* Cor branca para os links */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.menu a:hover {
+    background-color: var(--cor-destaque); /* Cor de destaque no hover */
+}
+
+/* Ícone de menu - visível apenas em mobile */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--cor-branco); /* Cor do ícone de menu */
+    background-color: var(--cor-secundaria); /* Cor de fundo do ícone */
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Estilo do conteúdo principal */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo das tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #1e4e8c;
+    color: white;
+    font-size: 18px;
+}
+
+td {
+    background-color: #fafafa;
+    font-size: 16px;
+}
+
+/* Estilo para os descritores da atividade */
+h3 {
+    margin-top: 20px;
+    color: #1e4e8c;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.text-footer {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    /* Esconde o menu padrão */
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Exibe o ícone de menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Estilo do menu quando está visível */
+    .menu.show {
+        display: flex;
+    }
+
+    /* Estilo para os itens do menu */
+    .menu li {
+        width: 85%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu a {
+        font-size: 22px;
+        padding: 15px;
+    }
+}

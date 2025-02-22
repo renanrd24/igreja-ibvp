@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recados</title>
+    <link rel="stylesheet" href="recados.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu {
+            background: #333;
+            padding: 10px;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .menu ul li {
+            display: inline;
+        }
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        .hamburger {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: #333;
+        }
+        .mobile-menu a {
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            border-top: 1px solid #444;
+        }
+        @media (max-width: 768px) {
+            .menu ul {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <span class="hamburger" onclick="toggleMenu()">☰</span>
+        <ul>
+            <li><a href="/index.html"><img src="/Design sem nome (15).png" alt=""></a></li>
+            <li><a href="/porjetoservir.html"><img width="50px" src="/306144514_455408166621205_7678811660521052133_n.png" alt="Projeto Servir"></a></li>
+            <li><a href="/localizaçao.html"><img src="/Design sem nome (9).png" alt="Localização"></a></li>
+            <li><a href="/contatos.html"><img src="/Design sem nome (10).png" alt="Meios de Contato"></a></li>
+            <li><a href=" /redesoc.html"><img src="/Design sem nome (11).png" alt="Redes Sociais"></a></li>
+            <li><a href="/infor.html"><img src="/Design sem nome (12).png" alt="Documentação"></a></li>
+            <li><a href="/dizimo.html"><img src="/Design sem nome (14).png" alt="Dizimo"></a></li>
+            <li><a href=" /cadastro.html"><img src="/Design sem nome (8).png" alt="Troca de Usuario"></a></li>
+        </ul>
+        <div class="mobile-menu" id="mobileMenu">
+            <li><a href="/index.html"><img src="/Design sem nome (15).png" alt=""></a></li>
+            <li><a href="/porjetoservir.html"><img width="50px" src="/306144514_455408166621205_7678811660521052133_n.png" alt="Projeto Servir"></a></li>
+            <li><a href="/localizaçao.html"><img src="/Design sem nome (9).png" alt="Localização"></a></li>
+            <li><a href="/contatos.html"><img src="/Design sem nome (10).png" alt="Meios de Contato"></a></li>
+            <li><a href="/redesoc.html"><img src="/Design sem nome (11).png" alt="Redes Sociais"></a></li>
+            <li><a href="/infor.html"><img src="/Design sem nome (12).png" alt="Documentação"></a></li>
+            <li><a href="/dizimo.html"><img src="/Design sem nome (14).png" alt="Dizimo"></a></li>
+            <li><a href="/cadastro.html"><img src="/Design sem nome (8).png" alt="Troca de Usuario"></a></li>
+        </div>
+    </nav>
+    <header class="section-home">
+        <h1>Seja Bem-vindo à Página de <i class="tet-projeto">Recados</i> da Nossa Igreja</h1>
+        <p>É com grande prazer que convidamos você a conhecer nossa igreja. Estamos sempre promovendo eventos e atividades que acontecem quase todos os dias, proporcionando momentos especiais para toda a comunidade. Venha fazer parte dessa experiência conosco!</p>
+    </header>
+    <section id="servicos" class="section-servicos">
+        <h2>Recados</h2>
+        <div class="service">
+            <h3>Domingo</h3>
+            <p>Projeto Criança Feliz <i>10:00</i></p>
+            <p>Culto da Família <i>19:30</i></p>
+        </div>
+        <div class="service">
+            <h3>Segunda-feira</h3>
+            <p>Culto de Oração <i>20:00</i></p>
+        </div>
+        <div class="service">
+            <h3>Terça-feira</h3>
+            <p>Tarde da Bênção <i>13:00</i></p>
+        </div>
+        <div class="service">
+            <h3>Quarta-feira</h3>
+            <p>Culto da Vitória <i>20:00</i></p>
+        </div>
+        <div class="service">
+            <h3>Quinta-feira</h3>
+            <p>Culto no Lar</p>
+        </div>
+        <div class="service">
+            <h3>Sexta-feira</h3>
+            <p>Estudo Bíblico <i>20:00</i></p>
+        </div>
+        <div class="service">
+            <h3>Sábado</h3>
+            <p>Culto de Jovens <i>19:30</i></p>
+        </div>
+    </section>
+    <footer>
+        <p>2025 - IBVP Igreja Batista Vida Plena</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("mobileMenu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
+        }
+    </script>
+</body>
+</html>
